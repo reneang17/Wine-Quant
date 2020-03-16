@@ -207,13 +207,12 @@ MAE(res_num_w_gaussian,ywhite_test)
 #plot(res.cv.modpls)
 #############################################################################
 
-res_w_plsR<-plsR(ywhite,  Xwhite,6)
+res_w_plsR<-plsR(ywhite,Xwhite, 4)
+res_w_plsR
 res_num_plsR <-  predict(res_w_plsR, newdata = Xwhite_test)
 print('Todo: adjust using kfold')
 print('The Mae for pls on white wine is')
 MAE(res_num_plsR,ywhite_test)
-
-
 
 
 
